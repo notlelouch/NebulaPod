@@ -17,8 +17,8 @@ def main():
     )
     stdout, stderr = completed_process.communicate()
 
-    print(completed_process.stdout.decode("utf-8"))
-    print(completed_process.stderr.decode("utf-8"))
+    sys.stdout.write(stdout.decode("utf-8"))
+    sys.stderr.write(stderr.decode("utf-8"))
 
 if __name__ == "__main__":
     main()
