@@ -13,7 +13,7 @@ def main():
     #print(completed_process.stdout.decode("utf-8"))
 
     completed_process = subprocess.Popen(
-        [command], *args, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        [command], *args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, capture_output = True
     )
     stdout, stderr = completed_process.communicate()
 
