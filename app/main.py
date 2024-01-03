@@ -1,7 +1,6 @@
 import subprocess
 import sys
 
-
 def main():
 
 # Retrieving the command and its arguments from the command-line arguments
@@ -13,7 +12,7 @@ def main():
     #print(completed_process.stdout.decode("utf-8"))
 
     completed_process = subprocess.Popen(
-        [command], *args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, capture_output = True
+        [command, *args], stdout=subprocess.PIPE, stderr=subprocess.PIPE, capture_output = True
     )
     stdout, stderr = completed_process.communicate()
 
