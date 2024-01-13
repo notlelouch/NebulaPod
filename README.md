@@ -8,10 +8,10 @@ NebulaPod is a Docker implementation written in Python that allows you to pull D
 
 - **Docker Image Execution:** Run commands inside Docker images pulled from Docker Hub.
 - **STDOUT and STDERR Handling:** Capture and display standard output and error streams.
--**Exit Code Handling:** Properly handle and return exit codes from executed commands.
--**Filesystem Isolation:** Enhance security by isolating the filesystem for each container.
--**Process Isolation:** Isolate processes within the container for improved resource management.
--**Docker Registry Support:** Fetch Docker images from any Docker registry.
+- **Exit Code Handling:** Properly handle and return exit codes from executed commands.
+- **Filesystem Isolation:** Enhance security by isolating the filesystem for each container.
+- **Process Isolation:** Isolate processes within the container for improved resource management.
+- **Docker Registry Support:** Fetch Docker images from any Docker registry.
 
 ## Getting Started
 
