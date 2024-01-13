@@ -35,6 +35,29 @@ You can now execute your program like this:
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer echo hey
 ```
+## Examples
+
+For handling exit codes:
+
+```sh
+mydocker run ubuntu:latest /usr/local/bin/docker-explorer exit 1
+```
+
+For isolating files:
+
+```sh
+mydocker run ubuntu:latest /usr/local/bin/docker-explorer ls /some_dir
+```
+for isolating process:
+
+```sh
+mydocker run ubuntu:latest /usr/local/bin/docker-explorer mypid
+```
+for fetching an image from the Docker Registry:
+
+```sh
+mydocker run ubuntu:latest /usr/local/bin/docker-explorer exit 1
+```
 
 ## Project Structure
 
