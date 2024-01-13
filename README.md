@@ -23,8 +23,8 @@ Python 3.6 or higher
 
 Clone the repository and navigate to the project directory:
 ```bash
-    git clone https://github.com/<your-username>/NebulaPod.git
-    cd NebulaPod
+git clone https://github.com/<your-username>/NebulaPod.git
+cd NebulaPod
    ```
 
 ## Usage
