@@ -22,7 +22,6 @@ Python 3.6 or higher
 ### Installation
 
 Clone the repository and navigate to the project directory:
-
 ```bash
     git clone https://github.com/<your-username>/NebulaPod.git
     cd NebulaPod
@@ -31,30 +30,25 @@ Clone the repository and navigate to the project directory:
 ## Usage
 
 You can now execute your program like this:
-
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer echo hey
 ```
 ## Examples
 
 For handling exit codes:
-
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer exit 1
 ```
 
 For isolating files:
-
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer ls /some_dir
 ```
 for isolating process:
-
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer mypid
 ```
 for fetching an image from the Docker Registry:
-
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer exit 1
 ```
