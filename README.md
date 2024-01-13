@@ -1,51 +1,46 @@
 [![progress-banner](https://backend.codecrafters.io/progress/docker/ecc992c6-193d-487b-b151-aa907fd8d6ff)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
-This is a starting point for Python solutions to the
-["Build Your Own Docker" Challenge](https://codecrafters.io/challenges/docker).
+# NebulaPod
 
-In this challenge, you'll build a program that can pull an image from
-[Docker Hub](https://hub.docker.com/) and execute commands in it. Along the way,
-we'll learn about [chroot](https://en.wikipedia.org/wiki/Chroot),
-[kernel namespaces](https://en.wikipedia.org/wiki/Linux_namespaces), the
-[docker registry API](https://docs.docker.com/registry/spec/api/) and much more.
+NebulaPod is a Docker implementation written in Python that allows you to pull Docker images from Docker Hub and execute commands within them. This project is designed to provide a lightweight and efficient alternative for running containerized applications without the need for a full-fledged container runtime.
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+## Features
 
-# Passing the first stage
+- **Docker Image Execution:** Run commands inside Docker images pulled from Docker Hub.
+- **STDOUT and STDERR Handling:** Capture and display standard output and error streams.
+-**Exit Code Handling:** Properly handle and return exit codes from executed commands.
+-**Filesystem Isolation:** Enhance security by isolating the filesystem for each container.
+-**Process Isolation:** Isolate processes within the container for improved resource management.
+-**Docker Registry Support:** Fetch Docker images from any Docker registry.
 
-The entry point for your Docker implementation is `app/main.py`. Study and
-uncomment the relevant code, and push your changes to pass the first stage:
+## Getting Started
 
-```sh
-git add .
-git commit -m "pass 1st stage" # any msg
-git push origin master
-```
+### Prerequisites
 
-That's all!
+Python 3.6 or higher
 
-# Stage 2 & beyond
+### Installation
 
-Note: This section is for stages 2 and beyond.
+Clone the repository and navigate to the project directory:
 
-You'll use linux-specific syscalls in this challenge. so we'll run your code
-_inside_ a Docker container.
+```bash
+    git clone https://github.com/<your-username>/NebulaPod.git
+    cd NebulaPod
+   ```
 
-Please ensure you have [Docker installed](https://docs.docker.com/get-docker/)
-locally.
-
-Next, add a [shell alias](https://shapeshed.com/unix-alias/):
-
-```sh
-alias mydocker='docker build -t mydocker . && docker run --cap-add="SYS_ADMIN" mydocker'
-```
-
-(The `--cap-add="SYS_ADMIN"` flag is required to create
-[PID Namespaces](https://man7.org/linux/man-pages/man7/pid_namespaces.7.html))
+## Usage
 
 You can now execute your program like this:
 
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer echo hey
 ```
+
+## Project Structure
+
+**main.py:** The core implementation of NebulaPod
+
+## Contributing
+
+Contributions are welcome! If you have ideas for improvements, new features, or bug fixes, please open an issue or submit a pull request.
+
